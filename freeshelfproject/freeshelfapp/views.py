@@ -2,4 +2,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def index(request):
-    return HttpResponse("hell welcome to this blank page!")
+    return HttpResponse("hello welcome to this blank page!")
