@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
+    # 'ACCOUNT_ACTIVATION_DAYS',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'freeshelfapp',
+    #""" MY App"""
+    'freeshelfapp.apps.FreeshelfappConfig',
 ]
 
 MIDDLEWARE = [

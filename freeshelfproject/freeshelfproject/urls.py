@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from freeshelfapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-
 ]
 # Use include() to add paths from the freeshelfapp application 
 from django.urls import include
@@ -26,6 +25,8 @@ from django.urls import path
 
 urlpatterns += [
     path('freeshelfapp/', include('freeshelfapp.urls')),
+    path('accounts/', include('registration.backends.default.urls')),
+
 ]
 
 #Add URL maps to redirect the base URL to our application
