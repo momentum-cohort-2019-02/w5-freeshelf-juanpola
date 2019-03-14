@@ -3,6 +3,7 @@ from datetime import date , datetime
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 from slugger import AutoSlugField 
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -15,6 +16,8 @@ class Book(models.Model):
     book_urls = models.URLField(max_length=150, null=True)
     book_description = models.CharField(max_length=5000, null=True, blank=True)
     date_added = models.DateField('Date Added', auto_now_add=True)
+    book_image= models.ImageField(upload_to="book_image", blank="true")
+    Favorited_by_user= models.ManyToManyField(to=User, related_name='favorites')
 
     # def get_absolute_url(self):
     #     return ('book_post_detial', (),
@@ -61,3 +64,6 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
+class Favorite(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorite' )
+    book = models.ForeignKey(User, on_delete=models.CASCADE, related_name='books')
