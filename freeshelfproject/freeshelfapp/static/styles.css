@@ -1,10 +1,71 @@
-.freeshelftitle{
+.freeshelftitle {
     font-family: monospace;
-    border: dashed;
-    background-color: aqua;
+    border-radius: 3%;
+    font-size: 200%;
 }
-body{
-    background-color: yellow;
+
+.title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.books_by_category {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.recent_title {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.category {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.account_menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+body {
+    background-color: whitesmoke;
     margin: 5%;
     padding: 1%;
 }
+
+.recent_title {
+    padding: 3%;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* border: 1px solid silver; */
+    -ms-box-orient: horizontal;
+    display: flex;
+}
+
+.box1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .box1{
+    flex-wrap: wrap;
+}
+.box2{
+    flex-wrap: wrap;
+}
+.box3{
+    flex-wrap: wrap;
+} */
