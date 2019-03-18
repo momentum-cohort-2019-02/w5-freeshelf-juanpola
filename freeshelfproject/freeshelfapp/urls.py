@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 urlpatterns = [
      # path('', views.index, name='index'),
      path('',views.index, name='index'),
-     path('',views.about, name='about')
+     path('',views.login, name='login')
      # url(r'^login/$',login,{'template_name':accounts/login.html})
 ] 
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

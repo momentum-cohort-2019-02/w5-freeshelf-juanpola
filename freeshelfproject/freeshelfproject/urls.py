@@ -25,7 +25,7 @@ from django.urls import path
 
 urlpatterns += [
     path('freeshelfapp/', include('freeshelfapp.urls')),
-    path('about/', include('registration.backends.default.urls')),
+    path('login/', include('registration.backends.default.urls')),
 
 ]
 

@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     #""" MY App"""
     'freeshelfapp.apps.FreeshelfappConfig',
 ]
+#registation 
+ACCOUNT_ACTIVATION_DAYS = 7
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
